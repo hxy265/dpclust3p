@@ -592,7 +592,7 @@ GetDirichletProcessInfo<-function(outputfile, cellularity, info, subclone.file, 
 #' @noRd
 GetCellularity <- function(rho_and_psi_file) {
   d = read.table(rho_and_psi_file, header=T, stringsAsFactors=F)
-  return(d['FRAC_GENOME','rho'])
+  return(d[1,'purity'])
 }
 
 #' Convenience function to fetch WTCount and mutCount
